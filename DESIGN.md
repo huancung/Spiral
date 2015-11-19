@@ -5,7 +5,8 @@ Create a command line tool to draw spirals. Just print the output to console. Th
 
 The program should be object oriented. Currently it only draws spirals, but the tool will eventually draw more things like rectangle, triangle, etc and it will not only draw it as ASCII, it will draw as SVG and other formats too. The drawing functionalities will also be exposed via web application and REST API. Your class design should take into account those future requirements so that it’s easy to add those functionalities. Write down your design rationale on the file DESIGN.md on the root of the project directory using Markdown format.
 
-The image below shows the output of spiral 6, spiral 11, and spiral 17 from left to right.spiral 6 can be ruby spiral.rb 6 or whatever is convenient for your programming language. Use git to version control the code as you work on it.
+Example:
+
 ```sh
 Spiral 17
 +----------------
