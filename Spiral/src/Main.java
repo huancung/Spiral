@@ -2,8 +2,16 @@
 public class Main {
 
 	public static void main(String[] args) {
-		new Spiral(6);
-
+		int argInt = 0;
+		try {
+			String argStr = args[0];
+			argInt = Integer.parseInt(argStr);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		Spiral mySpiral = new Spiral(argInt);
+		mySpiral.printShape();
 	}
 
 }
