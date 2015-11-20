@@ -31,12 +31,11 @@ Spiral 17
 There were a few things to keep in mind when designing this application.
 * Future implementations will draw additional shapes
 * Future implementation to output as SVG
+* Future implementation will draw different shapes
 
-Keeping these things in mind I decided to implement the application with a 2d char array as the "canvas" that will store the shape. I chose the array because it's essentially a matrix with built in coordinates and in the future can help faciilitate SVG output because SVG's use coordinates/points to draw shapes. In the current implementation we only need to store ascii characters for console output.
+Keeping these things in mind I decided to implement the application with a 2d char array as the "canvas" that will store the shape. I chose the array because it's essentially a matrix with built in coordinates and in the future can help faciilitate SVG output because SVG's use coordinates/points to draw shapes. In the current implementation we only need to store ascii characters for console output. In the future different shapes will require different draw algorithm but the shapes can still be stored in the array.
 
-After studying the examples supplied with the example I was able to figure out a pattern that facilitates drawing the spiral shape. In the future different shapes will require different draw algorithm but the shapes can still be stored in the array.
-
-The pattern is that every edge is one character length shorter than the previous edge. Also the drawing of the edges happen in a particular order (top, left, bottom, and right). The algorithm populates the array drawing edges following the predescribed order, decrementing the length at direction changes and continue drawing until side length 0 is reached.
+After studying the examples supplied, I was able to figure out a pattern that facilitates drawing the spiral shape. The pattern is that every edge is one character length shorter than the previous edge. Also the drawing of the edges happen in a particular order (top, left, bottom, and right). The algorithm populates the array drawing edges following the predescribed order, decrementing the length at direction changes and continue drawing until side length 0 is reached.
 
 ```sh
 Using the spiral 17 example
